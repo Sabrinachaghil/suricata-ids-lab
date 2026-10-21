@@ -1,0 +1,2 @@
+alert tcp any any -> $HOME_NET any (msg:"LOCAL Nmap SYN scan detected"; flags:S; threshold:type both, track by_src, count 20, seconds 5; classtype:attempted-recon; sid:1000001; rev:1;)
+alert tcp any any -> $HOME_NET 22 (msg:"LOCAL SSH brute force attempt"; flow:to_server; flags:S; threshold:type both, track by_src, count 5, seconds 60; classtype:attempted-recon; sid:1000003; rev:1;)
