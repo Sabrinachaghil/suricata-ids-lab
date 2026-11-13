@@ -43,7 +43,8 @@ alert tcp any any -> $HOME_NET 22 (msg:“LOCAL SSH brute force attempt”; flow
 | OS/service detection | nmap -A | ✅ | Logged via SSH service fingerprint |
 | SSH brute force | Hydra | ✅ | `LOCAL SSH brute force attempt` |
 
-See `/screenshots` for full evidence (config, rule loading, alerts).
+### 🎥 SOC Home Lab Demo
+[Watch Demo Video (MP4)](./suricata-lab-overview.mp4)
 
 ## Challenges & fixes
 
